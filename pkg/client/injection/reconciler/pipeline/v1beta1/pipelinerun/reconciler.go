@@ -172,7 +172,7 @@ func (r *reconcilerImpl) Reconcile(ctx context.Context, key string) error {
 	// Initialize the reconciler state. This will convert the namespace/name
 	// string into a distinct namespace and name, determine if this instance of
 	// the reconciler is the leader, and any additional interfaces implemented
-	// by the reconciler. Returns an error is the resource key is invalid.
+	// by the reconciler. Returns an error if the resource key is invalid.
 	s, err := newState(key, r)
 	if err != nil {
 		logger.Error("Invalid resource key: ", key)
